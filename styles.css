@@ -1,0 +1,46 @@
+label,
+input {
+    display: block;
+}
+
+#main-canvas {
+    margin: 5px;
+    border: 1px solid black;
+}
+
+body {
+    display: flex;
+}
+
+.point-position {
+    margin: 0;
+    text-align: center;
+}
+
+label {
+    display: inline;
+}
+
+msup {
+    font-size: 20px;
+}
+
+div.math {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.math,
+sup,
+sub {
+    font-size: 20px;
+}
+
+span.math {
+    display: block;
+    margin-top: 40px;
+}
+
+#trapeziodal {
+    margin-top: 20px;
+}

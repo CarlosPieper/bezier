@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curva de bezier - Carlos e Giseli</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body style="padding: 0; margin: 0;">
+    <div class="canvas-div">
+        <canvas id='main-canvas' width="900px" height="900px"></canvas>
+    </div>
+    <div class="side-menu">
+        <label for="samples">Quantidade de intervalos:</label>
+        <select name="samples" id="samples">
+            <option value="6">6</option>
+            <option value="12">12</option>
+            <option value="18">18</option>
+            <option value="24">24</option>
+            <option value="30">30</option>
+            <option value="36">36</option>
+            <option value="42">42</option>
+        </select>
+        <p style="text-align: center;">X | Y</p>
+        <hr>
+        <div id="positions-table" style="width: 200px;">
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+            <p class="point-position"></p>
+        </div>
+    </div>
+    <div class="math">
+        <span class="math">
+            1 - Trapézios:<br>
+            <sup>h</sup>/<sub>2</sub> *
+            <span>
+                [y0 + 2y1 + 2y2 + 2y3 + ... + 2yn-1 + yn]
+            </span>
+        </span>
+        <span class="math" id="trapeziodal"></span>
+        <span class="math">
+            2 - Primeira regra de Simpson:<br>
+            <sup>h</sup>/<sub>3</sub> *
+            <span>
+                [y0 + 4y1+ 2y2 + 4y3 + 2y4 + ... + 2yn-2 + 4yn-1 + yn]
+            </span>
+        </span>
+        <span class="math" id="simpson1"></span>
+        <span class="math">
+            3 - Segunda regra de Simpson:<br>
+            <sup>h</sup>/<sub>3</sub> *
+            <span>
+                [y0 + 3y1+ 3y2 + 2y3 + 3y4 + 3y5 + 2y4 + ... + 2yn-3 + 3yn-2 + 3yn-1 + yn]
+            </span>
+        </span>
+        <span class="math" id="simpson2"></span>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
